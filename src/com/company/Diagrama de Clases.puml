@@ -1,0 +1,25 @@
+@startuml
+hide circle
+
+class Calculadora{
+sumar(num_1:Numero,num_2:Numero)
+restar(num_1:Numero,num_2:Numero)
+}
+
+class Numero{
+tipo_de_numero
+identificarNumero(variable)
+transformarNumero(variable)
+}
+
+class Binario
+class Decimal
+class Romano
+
+Calculadora"*"<--Numero
+Numero <|-- Binario
+Numero <|-- Decimal
+Numero <|-- Romano
+
+
+@enduml
